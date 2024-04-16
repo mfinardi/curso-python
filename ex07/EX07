@@ -1,0 +1,29 @@
+Definição dos Dicionários:
+
+estados: Um dicionário que mapeia o nome completo do estado para a sigla do estado.
+capitais: Um dicionário que mapeia a sigla do estado para o nome da capital desse estado.
+Função detectar_tipo_expressao(expressao):
+
+Recebe uma expressão como entrada.
+Remove espaços em branco da expressão usando strip().
+Verifica se a expressão em letras maiúsculas está presente nos valores das capitais (usando list comprehension e upper() para tornar a comparação insensível a maiúsculas/minúsculas). Se estiver presente, retorna "capital".
+Caso contrário, verifica se a expressão em formato de título (a primeira letra de cada palavra maiúscula) está presente nas chaves dos estados. Se estiver presente, retorna "estado".
+Se não estiver presente em nenhum dos casos anteriores, retorna "nenhum".
+Função main():
+
+Solicita ao usuário que digite o texto contendo as expressões separadas por vírgula.
+Verifica se há vírgulas consecutivas na entrada e imprime uma mensagem de erro se encontrá-las.
+Divide a entrada em expressões separadas por vírgula usando re.split(r',\s*', entrada).
+Para cada expressão (expr) nas expressões divididas:
+Usa a função detectar_tipo_expressao(expr) para determinar o tipo da expressão.
+Se for "capital":
+Encontra o estado correspondente à capital (cidade) na expressão e imprime o nome da capital e o estado correspondente.
+Se for "estado":
+Encontra a capital correspondente ao estado na expressão e imprime o nome da capital e o estado.
+Se for "nenhum", imprime que a expressão não é uma capital nem um estado.
+O código está estruturado para lidar com diferentes tipos de entradas e retornar as informações corretas sobre as capitais e estados correspondentes.
+
+
+Message ChatGPT…
+
+ChatGPT can make mistakes. Consider checking important information.

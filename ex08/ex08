@@ -1,0 +1,15 @@
+Dicionário de músicos e anos:
+
+Temos um dicionário chamado d que mapeia o nome dos músicos para o ano de nascimento deles.
+Organização por ano e nome:
+
+Primeiro, usamos a função sorted() para organizar os itens do dicionário por ano de nascimento em ordem ascendente. Isso é feito com sorted(d.items(), key=lambda x: x[1]). Aqui, d.items() fornece os pares (chave, valor) do dicionário, e key=lambda x: x[1] indica que queremos ordenar com base no segundo elemento de cada par, ou seja, o ano de nascimento.
+Após essa operação, musicos_por_ano será uma lista de tuplas, onde cada tupla contém o nome do músico e o ano de nascimento, ordenados por ano de nascimento em ordem ascendente.
+Organização por ano e nome (em caso de anos similares):
+
+Em seguida, usamos sorted() novamente para organizar os músicos em ordem alfabética, mas mantendo a ordem de ano de nascimento para os anos que forem iguais. Isso é feito com sorted(musicos_por_ano, key=lambda x: (x[1], x[0])). Aqui, musicos_por_ano é a lista obtida anteriormente, e a chave de classificação key=lambda x: (x[1], x[0]) indica que queremos ordenar primeiro pelos anos de nascimento (primeiro elemento da tupla) e depois pelos nomes dos músicos (segundo elemento da tupla).
+Impressão dos músicos:
+
+Por fim, usamos um loop for para percorrer cada tupla na lista musicos_ordenados, que agora está organizada tanto por ano quanto por nome.
+Para cada tupla, imprimimos apenas o nome do músico usando print(musico).
+Isso resultará na impressão dos nomes dos músicos em ordem ascendente de ano de nascimento e, para anos de nascimento iguais, em ordem alfabética pelos nomes dos músicos.

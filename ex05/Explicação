@@ -1,0 +1,25 @@
+Definição da função get_capital(state): Esta função recebe o nome do estado como argumento e retorna a capital desse estado. Ela utiliza dois dicionários: states, que mapeia nomes de estados para códigos de estado, e capital_cities, que mapeia códigos de estado para capitais.
+
+Remoção de apóstrofos: Como mencionado anteriormente, essa linha remove apóstrofos extras da entrada do usuário, se presentes, para garantir que a comparação seja correta.
+
+Obtenção do código do estado: Aqui, usamos o método get() do dicionário states para obter o código do estado correspondente ao nome do estado fornecido como argumento.
+
+Verificação se o código do estado existe: Se o código do estado existir, significa que o estado é reconhecido. Nesse caso, continuamos e tentamos obter a capital correspondente usando o código do estado no dicionário capital_cities.
+
+Retorno da capital: Se a capital existir, retornamos a capital correspondente. Caso contrário, retornamos "Unknown capital".
+
+Retorno do estado desconhecido: Se o nome do estado não existir no dicionário states, retornamos "Unknown state".
+
+python
+Copy code
+if __name__ == "__main__":
+    state = raw_input("Enter a state: ")  # Alterado para raw_input() para Python 2
+    capital = get_capital(state)
+    print(capital)
+Verificação se o script está sendo executado diretamente: Este bloco verifica se o script está sendo executado diretamente ou se foi importado como um módulo em outro script. Se estiver sendo executado diretamente, continuamos a execução.
+
+Obtenção do estado do usuário: Usamos a função raw_input() para solicitar ao usuário que insira o nome do estado.
+
+Chamada da função get_capital(): Passamos o nome do estado fornecido como entrada para a função get_capital() para obter a capital correspondente.
+
+Impressão da capital: Imprimimos a capital obtida pela função get_capital() na saída padrão.
